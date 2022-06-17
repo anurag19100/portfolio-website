@@ -11,11 +11,11 @@ function LeftText() {
 				<p className='animated_text'>
 					<Typed
 						strings={[
-							'I am an engineer',
+							'I am an Engineer',
 							'I am a Full Stack Developer',
 							'I am a MERN Stack Developer',
 							'I am a Open Source Contributor',
-							'i am a Freelancer',
+							'I am a Freelancer',
 							'I am a Critical Thinker',
 							'I am a Graphics Designer',
 							

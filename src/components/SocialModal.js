@@ -1,7 +1,6 @@
 import { AiOutlineLinkedin} from 'react-icons/ai'
 import {FaGooglePlusG} from 'react-icons/fa'
 import {Button, Container, FormControl, InputGroup} from 'react-bootstrap'
-import HomeModal from './HomeModal'
 import React from 'react'
 import styled from 'styled-components'
 

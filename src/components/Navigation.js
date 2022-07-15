@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 
 import React, {useState} from 'react'
-import PortfolioLogo from '../assets/Image/logo.svg'
+import PortfolioLogo from '../assets/Image/logo.png'
 import loadable from '@loadable/component'
 
 const ResumeModal = loadable(() => import('./ResumeModal'))

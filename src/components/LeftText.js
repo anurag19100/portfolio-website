@@ -1,10 +1,13 @@
 import React from 'react'
 import Typed from 'react-typed'
 
+
 function LeftText() {
 	return (
 		<div className='leftText'>
+			 
 			<div className='flex-fix'>
+			
 				<h2>Hi, </h2>
 				<span className='preTitle'>I am </span>
 				<h1 className='name_big'>Anurag Gupta</h1>

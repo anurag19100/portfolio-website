@@ -21,6 +21,7 @@ const ProjectList = loadable(() =>
 )
 
 const routes = [
+	
 	{
 		path: '/',
 		component: Home,

@@ -1,6 +1,7 @@
 import {Col} from 'react-bootstrap'
 import LeftText from './LeftText'
 import React from 'react'
+import Particle from "./Particle";
 // import loadable from '@loadable/component'
 // import Particles from 'react-particles-js';
 // import particlesConfig from './../config/particlesConfig';
@@ -12,7 +13,7 @@ function Left() {
 		
 		<Col md className='LeftSec'>
 			 {/* <Particles height="100vh" width="100vw" params={particlesConfig} /> */}
-	
+			 <Particle />
 			<LeftText />
 			
 		</Col>

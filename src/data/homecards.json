@@ -16,6 +16,17 @@
 				},
 				{
 					"id": 2,
+					"title": "Realtime Gesture Recognition Using Tensorflow.js",
+					"description": "Implemented real time custom gesture recognition on web using Handpose model and Fingerpose model of tensorflow.js which detects the hand landmark structure and predicts the gesture made by finger curls. It is integrated with react js and HTML canvas for UI.",
+					"projectRoute": "https://hand-sign-detection.netlify.app/",
+					"githubUrl": "https://github.com/super1-1star/Realtime-gesture-Recognition-on-Web-Using-Tensorflow.js",
+					"badgeTitle": ["React","Tensorflow.js", "Mediapipe","HTML Canvas"],
+					"initialColor": "#56CCF2",
+					"finalColor": "#2F80ED",
+					"language": "Javascript"
+				},
+				{
+					"id": 3,
 					"title": " Blockchain based vehicle ownership transfer",
 					"description": "• A web application for registering and transfer of vehicle ownership using Decentralize system. Designing and development of Solidity smart contracts.",
 					"githubUrl": "https://github.com/super1-1star/Blockchain-based-vehicle-ownership-transfer",
@@ -25,7 +36,7 @@
 					"language": "solidity"
 				},
 				{
-					"id": 3,
+					"id": 4,
 					"title": "Cromatica Interior",
 					"description": "This is a Landing page for Cromaica Home Interior in which UI design from Figma and build using HTML, CSS, Bootstrap, javascrpit and NodeJS.",
 					"projectRoute": "https://cromatica-interior.netlify.app/",
@@ -36,7 +47,7 @@
 					"language": "JavaScript"
 				},
 				{
-					"id": 4,
+					"id": 5,
 					"title": "Starelta---A-react.js-web-app",
 					"projectRoute": "https://starelta.netlify.app/",
 					"githubUrl":"https://github.com/super1-1star/Starelta---A-react.js-web-app",
@@ -47,7 +58,7 @@
 					"language": "Javascript"
 				},
 				{
-					"id": 5,
+					"id": 6,
 					"title": "Starresto---A-Online-Restaurant-Platform",
 					"projectRoute": "https://starresto.netlify.app/",
 					"githubUrl":"https://github.com/super1-1star/Starresto---A-Online-Restaurant-Platform",
@@ -63,7 +74,7 @@
 					"language": "Javascript"
 				},
 				{
-					"id":6,
+					"id":7,
 					"title":"NFT-MarketPlace",
 					"projectRoute":"https://github.com/super1-1star/nft-marketplace",
 					"githubUrl":"https://github.com/super1-1star/nft-marketplace",
@@ -279,7 +290,7 @@
 					"title": "Open Source Contributor",
 					"position":"Full stack",
 					"description": [
-						""
+						"Collaborated with developers across the globe and worked as Web developer. "
 					],
 					"duration": "2021 - Present.",
 					"location": "Remote",

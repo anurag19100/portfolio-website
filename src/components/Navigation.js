@@ -46,7 +46,8 @@ function Navigation() {
 							<Button
 								variant='light'
 								
-								href='https://github.com/super1-1star/super1-1star/raw/master/cv/anurag_gupta_cv.pdf'
+								href='https://drive.google.com/uc?export=download&id=1RbjF13KHmV-5b_CZMYZI2RXUyg7hHY08'
+						
 								style={{
 									borderRadius: '0 4px 4px 0',
 								}}
@@ -56,7 +57,7 @@ function Navigation() {
 									fill='rgba(0,0,0,0.5)'
 									onClick={() =>
 										(window.location =
-											'https://github.com/super1-1star/super1-1star/raw/master/cv/anurag_gupta_cv.pdf')
+											'https://drive.google.com/uc?export=download&id=1RbjF13KHmV-5b_CZMYZI2RXUyg7hHY08')
 									}
 								/>
 							</Button>

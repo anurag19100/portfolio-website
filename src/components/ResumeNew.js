@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Particle from "./Particle";
-import pdf from "../../src/assets/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -46,7 +44,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href='https://drive.google.com/uc?export=download&id=1RbjF13KHmV-5b_CZMYZI2RXUyg7hHY08'
             target="_blank"
             style={{ maxWidth: "250px" }}
           >

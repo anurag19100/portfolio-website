@@ -44,7 +44,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href='https://drive.google.com/uc?export=download&id=1RbjF13KHmV-5b_CZMYZI2RXUyg7hHY08'
+            href='https://drive.google.com/uc?export=download&id=1YJsajrXQ4jRRUEyHlCBZN50KbmmIup-p'
             target="_blank"
             style={{ maxWidth: "250px" }}
           >

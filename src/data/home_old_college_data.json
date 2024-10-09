@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "title": "WebPe - FTWRebels Tech Pvt Ltd",
+            "position": "SDE Intern",
+            "duration": "2 Months",
+            "location": "Bangalore, India",
+            "url": "https://drive.google.com/file/d/1zerxG2dLoeelo_tLrM-r6-YOx74h0T1s/view",
+            "description": [
+                "Designed, built, tested, and deployed 4+ website within two months of span, updated and added new Features to Webpe Main website.",
+                "Contribute to group meetings and provide a status update on development tasks for progress reporting and Participate in code reviews"
+            ]
+        },
+        {
+            "title": "YourBrandMate - ZILLUSION PVT. LTD",
+            "position": "Frontend developer Intern",
+            "description": [
+                "Collaborated in a team as Frontend Developer Intern with Effectively communicate within an agile software development.",
+                "Work with senior engineers to review the problem report solution and implement the solution.",
+                "Involved in design, development, functional testing, performance testing, and deployment to various environments.",
+                "Involved in client calls to gathering requirements and clarification."
+            ],
+            "duration": "3 Months",
+            "location": " India",
+            "url": "https://yourbrandmate.in/"
+        },
+        {
+            "title": "Open Source Contributor",
+            "position": "Full stack",
+            "description": [
+                "Collaborated with developers across the globe and worked as Web developer. "
+            ],
+            "duration": "2021 - Present.",
+            "location": "Remote",
+            "url": "https://github.com/anurag19100"
+        }
+    ]
+}

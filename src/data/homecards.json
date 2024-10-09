@@ -8,8 +8,15 @@
 					"title": "A Tour-booking-Website",
 					"description": "A fully fledged web application made using MERN Stack to book tour , review tour, rate tour , Intermediated authentication features and many more .",
 					"projectRoute": "https://tour-booking-website.netlify.app/#/home",
-					"githubUrl": "https://github.com/super1-1star/Tour-booking-Website",
-					"badgeTitle": ["React"," Node", "Express"," Mongoose", "MongoDB", "React-Bootstrap"],
+					"githubUrl": "https://github.com/anurag19100/Tour-booking-Website",
+					"badgeTitle": [
+						"React",
+						" Node",
+						"Express",
+						" Mongoose",
+						"MongoDB",
+						"React-Bootstrap"
+					],
 					"initialColor": "#56CCF2",
 					"finalColor": "#2F80ED",
 					"language": "Javascript"
@@ -19,8 +26,13 @@
 					"title": "Realtime Gesture Recognition Using Tensorflow.js",
 					"description": "Implemented real time custom gesture recognition on web using Handpose model and Fingerpose model of tensorflow.js which detects the hand landmark structure and predicts the gesture made by finger curls. It is integrated with react js and HTML canvas for UI.",
 					"projectRoute": "https://hand-sign-detection.netlify.app/",
-					"githubUrl": "https://github.com/super1-1star/Realtime-gesture-Recognition-on-Web-Using-Tensorflow.js",
-					"badgeTitle": ["React","Tensorflow.js", "Mediapipe","HTML Canvas"],
+					"githubUrl": "https://github.com/anurag19100/Realtime-gesture-Recognition-on-Web-Using-Tensorflow.js",
+					"badgeTitle": [
+						"React",
+						"Tensorflow.js",
+						"Mediapipe",
+						"HTML Canvas"
+					],
 					"initialColor": "#56CCF2",
 					"finalColor": "#2F80ED",
 					"language": "Javascript"
@@ -29,8 +41,11 @@
 					"id": 3,
 					"title": " Blockchain based vehicle ownership transfer",
 					"description": "• A web application for registering and transfer of vehicle ownership using Decentralize system. Designing and development of Solidity smart contracts.",
-					"githubUrl": "https://github.com/super1-1star/Blockchain-based-vehicle-ownership-transfer",
-					"badgeTitle": ["Smart Contaract","solidity"],
+					"githubUrl": "https://github.com/anurag19100/Blockchain-based-vehicle-ownership-transfer",
+					"badgeTitle": [
+						"Smart Contaract",
+						"solidity"
+					],
 					"initialColor": "#373B44",
 					"finalColor": "#4286f4",
 					"language": "solidity"
@@ -40,8 +55,14 @@
 					"title": "Cromatica Interior",
 					"description": "This is a Landing page for Cromaica Home Interior in which UI design from Figma and build using HTML, CSS, Bootstrap, javascrpit and NodeJS.",
 					"projectRoute": "https://cromatica-interior.netlify.app/",
-					"githubUrl": "https://github.com/super1-1star/Cromatica-home-interior-landing-page",
-					"badgeTitle": ["HTML", "CSS", "Bootstrap", "javascrpit","NodeJS"],
+					"githubUrl": "https://github.com/anurag19100/Cromatica-home-interior-landing-page",
+					"badgeTitle": [
+						"HTML",
+						"CSS",
+						"Bootstrap",
+						"javascrpit",
+						"NodeJS"
+					],
 					"initialColor": "#f12711",
 					"finalColor": "#f5af19",
 					"language": "JavaScript"
@@ -50,9 +71,14 @@
 					"id": 5,
 					"title": "Starelta---A-react.js-web-app",
 					"projectRoute": "https://starelta.netlify.app/",
-					"githubUrl":"https://github.com/super1-1star/Starelta---A-react.js-web-app",
+					"githubUrl": "https://github.com/anurag19100/Starelta---A-react.js-web-app",
 					"description": "Initiated a data Security platform using reactJS as a front-end framework created almost 40+ reusable components.",
-					"badgeTitle": ["ReactJS", "React-Router", "CSS", "React-Bootstrap"],
+					"badgeTitle": [
+						"ReactJS",
+						"React-Router",
+						"CSS",
+						"React-Bootstrap"
+					],
 					"initialColor": "#11998e",
 					"finalColor": "#38ef7d",
 					"language": "Javascript"
@@ -61,7 +87,7 @@
 					"id": 6,
 					"title": "Starresto---A-Online-Restaurant-Platform",
 					"projectRoute": "https://starresto.netlify.app/",
-					"githubUrl":"https://github.com/super1-1star/Starresto---A-Online-Restaurant-Platform",
+					"githubUrl": "https://github.com/anurag19100/Starresto---A-Online-Restaurant-Platform",
 					"description": "Its a project to build Online Restaurant Platform using React.js",
 					"badgeTitle": [
 						"ReactJS",
@@ -74,11 +100,11 @@
 					"language": "Javascript"
 				},
 				{
-					"id":7,
-					"title":"NFT-MarketPlace",
-					"projectRoute":"https://github.com/super1-1star/nft-marketplace",
-					"githubUrl":"https://github.com/super1-1star/nft-marketplace",
-					"description":" NFT Marketplace brings artists and creators together on a single platform. ",
+					"id": 7,
+					"title": "NFT-MarketPlace",
+					"projectRoute": "https://github.com/anurag19100/nft-marketplace",
+					"githubUrl": "https://github.com/anurag19100/nft-marketplace",
+					"description": " NFT Marketplace brings artists and creators together on a single platform. ",
 					"badgeTitle": [
 						"ReactJS",
 						"web3.js",
@@ -102,56 +128,57 @@
 			"title": "Coding",
 			"value": [
 				{
-					"title": "JAVASCRIPT",
+					"title": "Kubernetes",
 					"level": "Intermediate"
 				},
 				{
-					"title": "REACTJS",
+					"title": "AWS",
 					"level": "Intermediate"
 				},
 				{
-					"title": "NODE.JS",
+					"title": "Terraform",
 					"level": "Intermediate"
 				},
 				{
-					"title": "EXPRESS",
+					"title": "Jenkins",
 					"level": "Intermediate"
 				},
 				{
-					"title": "MONGODB",
+					"title": "EFK, Grafana, Prometheus",
 					"level": "Intermediate"
 				},
 				{
-					"title": "HTML",
+					"title": "Linux",
 					"level": "Intermediate"
 				},
 				{
-					"title": "CSS",
+					"title": "Python",
 					"level": "Intermediate"
 				},
 				{
-					"title": "Bootstrap",
+					"title": "Bash",
 					"level": "Intermediate"
 				},
 				{
-					"title": "SQL",
-					"level": "Basic"
+					"title": "Groovy",
+					"level": "Intermediate"
+				},
+				{
+					"title": "MySql",
+					"level": "Intermediate"
 				},
 				{
 					"title": "C++",
 					"level": "Basic"
 				},
 				{
-					"title": "Python",
+					"title": "Docker",
 					"level": "Basic"
 				},
-				
 				{
-					"title": "Solidity",
+					"title": "RESTful API",
 					"level": "Basic"
 				}
-				
-				
 			],
 			"route": "/languages",
 			"initialColor": "#373B44",
@@ -205,7 +232,6 @@
 					"color": "#fef54b",
 					"text": "#1d1d1d"
 				},
-				
 				{
 					"title": "Vikash Residential School",
 					"duration": "2016 - 2018",
@@ -263,40 +289,51 @@
 			"title": "Work Experience",
 			"value": [
 				{
-					"title": "WebPe - FTWRebels Tech Pvt Ltd",
-					"position":"SDE Intern",
-					"duration": "2 Months",
+					"title": "BigBasket",
+					"position": "DevOps Enigneer I",
+					"duration": "July 2023 - Present",
 					"location": "Bangalore, India",
-					"url": "https://drive.google.com/file/d/1zerxG2dLoeelo_tLrM-r6-YOx74h0T1s/view",
+					"url": "https://www.bigbasket.com/",
 					"description": [
-						"Designed, built, tested, and deployed 4+ website within two months of span, updated and added new Features to Webpe Main website.",
-						"Contribute to group meetings and provide a status update on development tasks for progress reporting and Participate in code reviews"
+						"Automated numerous manual tasks, resulting in increased operational efficiency and reduced error rates.",
+						"Contributed to setup of EKS cluster using Terraform, including spotinst-managed node groups, RBAC for microservices, and deployment of various devops-managed kubernetes services. Integrated the Terraform code with a centralized MySQL database for RBAC management.",
+						"Implemented KEDA to facilitate event-driven autoscaling for Kubernetes workloads. Successfully deployed KEDA Cloudwatch for critical services in the production environment.",
+						"Contributed to the plan and execution of migrating 100+ microservices from EKS (v1.24) to EKS (v1.30) with zero downtime.",
+						"Developed a CLI tool of a self-service access management system. Leveraged APIs from multiple tools taking ownership of design and implementation, ensuring accountability through database records, JIRA tickets and Slackbot Notification. Resulted in a 90% reduction in time and effort spent on access management tasks",
+						"Working knowledge of AWS – ECS, EKS, RDS, S3, IAM.",
+						"Automated the creation of AWS resources (S3, ECR, Secrets Manager, SQS) using Python scripting, implementing AWS best practices to ensure secure, compliance, efficient, and scalable infrastructure management.",
+						"Hands-on experience in setting up secure Virtual Private Cloud environment including VPC, IAM, EC2, Security Groups, Network ACLs, Elastic IPs, Public and Private Subnets, NAT Gateways.",
+						"Worked with IAM creating new IAM users groups, defining roles and policies and Identity providers.",
+						"Coordinated with Software Development teams and QA teams.",
+						"Implemented team-wise infra cost tracking for Kubernetes resources.",
+						"Automated deployments via IAC Jenkins jobs, reducing time by 50% and increasing 75% of deployment frequency.",
+						"Performing Real time monitoring, analysis, diagnostics, initial troubleshooting and reporting.",
+						"Actively participated in on-call rotation, ensuring system availability and rapid resolution of production incidents."
 					]
 				},
 				{
-					"title": "YourBrandMate - ZILLUSION PVT. LTD",
-					"position":"Frontend developer Intern",
+					"title": "BigBasket",
+					"position": "DevOps Intern",
 					"description": [
-						"Collaborated in a team as Frontend Developer Intern with Effectively communicate within an agile software development.",
+						"Collaborated in a team as Frontend Developer Intern with Effectively communicate within an agile software development.I automated diverse processes using Jenkins, AWS, RESTful API, MySQL, Python, Groovy, and shell script.",
 						"Work with senior engineers to review the problem report solution and implement the solution.",
 						"Involved in design, development, functional testing, performance testing, and deployment to various environments.",
 						"Involved in client calls to gathering requirements and clarification."
 					],
-					"duration": "3 Months",
+					"duration": "6 Months",
 					"location": " India",
-					"url": "https://yourbrandmate.in/"
+					"url": "https://drive.google.com/file/d/18eHRhlMkZzfOWt1g6kyB54DZLHXIVbFY/view?usp=sharing"
 				},
 				{
 					"title": "Open Source Contributor",
-					"position":"Full stack",
+					"position": "Full stack",
 					"description": [
-						"Collaborated with developers across the globe and worked as Web developer. "
+						"Collaborated with developers across the globe and worked as developer,DevOps and System Engineer."
 					],
 					"duration": "2021 - Present.",
 					"location": "Remote",
-					"url": "https://github.com/super1-1star"
+					"url": "https://github.com/anurag19100"
 				}
-				
 			],
 			"route": "#",
 			"initialColor": "#e1eec3",

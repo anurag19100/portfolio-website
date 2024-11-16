@@ -2,6 +2,10 @@
 	"name": "anuragcv",
 	"version": "0.1.0",
 	"private": true,
+	"engines": {
+    "node": "14.x",
+    "npm": ">=6"
+  },
 	"dependencies": {
 		"@babel/core": "^7.25.7",
 		"@loadable/component": "^5.14.1",

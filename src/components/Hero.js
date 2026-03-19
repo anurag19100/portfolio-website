@@ -1,9 +1,25 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { personalInfo, stats } from '../data/portfolio'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { personalInfo, stats, socialLinks } from '../data/portfolio'
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt, FaBriefcase, FaRocket, FaLaptopCode, FaCode, FaMedium, FaDev, FaStackOverflow, FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+
+const iconMap = {
+  FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt,
+  FaXTwitter, FaBriefcase, FaRocket, FaLaptopCode, FaCode,
+  FaMedium, FaDev, FaStackOverflow,
+}
 
 export default function Hero() {
+  const [showProfiles, setShowProfiles] = useState(false)
+
+  const grouped = socialLinks.reduce((acc, link) => {
+    if (!acc[link.category]) acc[link.category] = []
+    acc[link.category].push(link)
+    return acc
+  }, {})
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,65,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,65,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -54,11 +70,12 @@ export default function Hero() {
             @ {personalInfo.company} &middot; {personalInfo.location}
           </motion.p>
 
+          {/* Quick links + Let's Connect */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="flex justify-center gap-4 mb-16"
+            className="flex justify-center gap-4 mb-6"
           >
             <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="p-3 glass-card glow-border rounded-xl hover:text-terminal-green transition-all">
               <FaGithub size={22} />
@@ -69,11 +86,68 @@ export default function Hero() {
             <a href={`mailto:${personalInfo.email}`} className="p-3 glass-card glow-border rounded-xl hover:text-terminal-orange transition-all">
               <FaEnvelope size={22} />
             </a>
-            <a href="#contact" className="px-6 py-3 bg-terminal-green/10 border border-terminal-green/50 text-terminal-green font-mono text-sm rounded-xl hover:bg-terminal-green/20 transition-all flex items-center gap-2">
+            <a
+              href={`mailto:${personalInfo.email}?subject=Let's Connect`}
+              className="px-6 py-3 bg-terminal-green/10 border border-terminal-green/50 text-terminal-green font-mono text-sm rounded-xl hover:bg-terminal-green/20 transition-all flex items-center gap-2"
+            >
               Let&apos;s Connect
             </a>
           </motion.div>
 
+          {/* Collapsible All Profiles */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1 }}
+            className="mb-12"
+          >
+            <button
+              onClick={() => setShowProfiles(!showProfiles)}
+              className="mx-auto flex items-center gap-2 px-4 py-2 text-gray-500 hover:text-terminal-green font-mono text-xs transition-colors"
+            >
+              {showProfiles ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+              {showProfiles ? 'hide profiles' : 'all profiles & links'}
+              {showProfiles ? <FaChevronUp size={10} /> : <FaChevronDown size={10} />}
+            </button>
+
+            <AnimatePresence>
+              {showProfiles && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden"
+                >
+                  <div className="glass-card glow-border rounded-2xl p-6 mt-3 max-w-2xl mx-auto">
+                    {Object.entries(grouped).map(([category, links]) => (
+                      <div key={category} className="mb-4 last:mb-0">
+                        <div className="font-mono text-xs text-terminal-green/50 mb-2">// {category}</div>
+                        <div className="flex flex-wrap gap-2">
+                          {links.map((link) => {
+                            const Icon = iconMap[link.icon] || FaGlobe
+                            return (
+                              <a
+                                key={link.name}
+                                href={link.url}
+                                target={link.url.startsWith('http') ? '_blank' : undefined}
+                                rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                className="flex items-center gap-2 px-3 py-2 bg-terminal-bg/50 border border-terminal-border rounded-lg hover:border-terminal-green/50 hover:text-terminal-green transition-all text-gray-400 text-sm font-mono group"
+                              >
+                                <Icon size={14} className="group-hover:scale-110 transition-transform" />
+                                {link.name}
+                              </a>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

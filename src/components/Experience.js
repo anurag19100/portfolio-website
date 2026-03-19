@@ -39,6 +39,9 @@ export default function Experience() {
                     <a href={exp.url} target="_blank" rel="noopener noreferrer" className="text-terminal-green font-mono text-sm hover:underline">
                       @ {exp.company}
                     </a>
+                    {exp.subtitle && (
+                      <span className="text-gray-600 font-mono text-xs ml-1">{exp.subtitle}</span>
+                    )}
                   </div>
                   <div className="text-gray-500 font-mono text-sm mt-2 md:mt-0">
                     {exp.duration} &middot; {exp.location}

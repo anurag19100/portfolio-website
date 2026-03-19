@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const commands = [
-  { cmd: 'kubectl get nodes', output: 'NAME          STATUS   ROLES    AGE   VERSION\nmaster-01     Ready    master   365d  v1.30.2\nworker-01     Ready    <none>   365d  v1.30.2\nworker-02     Ready    <none>   365d  v1.30.2\nworker-03     Ready    <none>   200d  v1.30.2' },
-  { cmd: 'kubectl get pods -n production | wc -l', output: '142' },
-  { cmd: 'terraform plan | tail -1', output: 'Plan: 0 to add, 0 to change, 0 to destroy.' },
-  { cmd: 'curl -s http://monitoring/api/v1/uptime', output: '{"status":"healthy","uptime":"99.97%","incidents_resolved":30}' },
-  { cmd: 'aws ce get-cost --monthly-savings', output: '{"monthly_savings":"$20,000","optimization":"CastAI + Kyverno"}' },
+  { cmd: 'kubectl get nodes --context=gke-prod', output: 'NAME              STATUS   ROLES    AGE   VERSION\ngke-node-pool-01  Ready    <none>   180d  v1.29.4-gke\ngke-node-pool-02  Ready    <none>   180d  v1.29.4-gke\ngke-node-pool-03  Ready    <none>   90d   v1.29.4-gke' },
+  { cmd: 'kubectl get pods -n production --no-headers | wc -l', output: '214' },
+  { cmd: 'terraform plan -out=tfplan | tail -1', output: 'Plan: 0 to add, 0 to change, 0 to destroy.' },
+  { cmd: 'gcloud sql instances list --format="value(state)" | sort | uniq -c', output: '1100 RUNNABLE  # All PG16 upgraded' },
+  { cmd: 'curl -s http://thanos-query/api/v1/targets | jq .status', output: '"success"  # 60+ GKE clusters monitored' },
+  { cmd: 'istioctl proxy-status | grep -c SYNCED', output: '142  # All sidecars healthy with mTLS' },
 ]
 
 export default function Terminal() {
@@ -40,7 +41,7 @@ export default function Terminal() {
             <div className="w-3 h-3 rounded-full bg-red-500/80" />
             <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
             <div className="w-3 h-3 rounded-full bg-green-500/80" />
-            <span className="text-gray-500 font-mono text-xs ml-2">anurag@bigbasket ~ production</span>
+            <span className="text-gray-500 font-mono text-xs ml-2">anurag@blackduck ~ production</span>
           </div>
 
           <div className="p-6 font-mono text-sm space-y-3 min-h-[300px] bg-[#0d0d0d]">

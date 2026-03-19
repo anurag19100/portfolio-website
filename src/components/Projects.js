@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { devopsProjects } from '../data/portfolio'
-import { FaServer, FaNetworkWired, FaChartLine, FaDocker, FaCogs, FaDollarSign } from 'react-icons/fa'
+import { FaServer, FaNetworkWired, FaChartLine, FaDocker, FaCogs, FaDollarSign, FaRobot, FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
 const categoryIcons = {
   'Platform Engineering': FaServer,
@@ -10,6 +10,7 @@ const categoryIcons = {
   'Auto-Scaling': FaCogs,
   'CI/CD': FaDocker,
   'FinOps': FaDollarSign,
+  'AI / MLOps': FaRobot,
 }
 
 const categoryColors = {
@@ -19,6 +20,7 @@ const categoryColors = {
   'Auto-Scaling': 'from-green-500 to-emerald-500',
   'CI/CD': 'from-red-500 to-orange-500',
   'FinOps': 'from-yellow-500 to-green-500',
+  'AI / MLOps': 'from-violet-500 to-fuchsia-500',
 }
 
 export default function Projects() {
@@ -40,7 +42,7 @@ export default function Projects() {
             DevOps <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-500 font-mono text-sm mb-12">
-            {'//'} production systems I&apos;ve built and managed
+            {'//'} open source &amp; production systems
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -55,8 +57,15 @@ export default function Projects() {
                   transition={{ delay: i * 0.1 }}
                   className="glass-card glow-border rounded-2xl p-6 group hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <Icon className="text-white" size={18} />
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <Icon className="text-white" size={18} />
+                    </div>
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-terminal-green transition-colors">
+                        <FaGithub size={18} />
+                      </a>
+                    )}
                   </div>
                   <div className="text-xs font-mono text-terminal-green/60 mb-2">{project.category}</div>
                   <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-terminal-green transition-colors">

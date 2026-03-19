@@ -2,19 +2,23 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { skills } from '../data/portfolio'
 import {
-  SiAmazonaws, SiKubernetes, SiDocker, SiTerraform, SiLinux,
-  SiJenkins, SiGithubactions, SiGit,
-  SiPrometheus, SiGrafana, SiElasticsearch,
-  SiPython, SiGnubash, SiJavascript,
+  SiKubernetes, SiDocker, SiTerraform, SiLinux,
+  SiJenkins, SiGithubactions, SiGit, SiGitlab,
+  SiPrometheus, SiGrafana, SiElasticsearch, SiDatadog, SiNewrelic, SiIstio,
+  SiPython, SiGnubash, SiJavascript, SiGo, SiGooglecloud,
 } from 'react-icons/si'
+import { FaAws } from 'react-icons/fa'
 
 const iconMap = {
-  SiAmazonwebservices: SiAmazonaws, SiKubernetes, SiDocker, SiTerraform, SiLinux,
-  SiJenkins, SiGithubactions, SiGit,
-  SiPrometheus, SiGrafana, SiElasticsearch,
-  SiPython, SiGnubash, SiJavascript,
+  SiAmazonwebservices: FaAws,
+  SiGooglecloud,
+  SiKubernetes, SiDocker, SiTerraform, SiLinux,
+  SiJenkins, SiGithubactions, SiGit, SiGitlab,
+  SiPrometheus, SiGrafana, SiElasticsearch, SiDatadog, SiNewrelic, SiIstio,
+  SiPython, SiGnubash, SiJavascript, SiGo,
   SiArgo: SiGithubactions,
   SiApachegroovy: SiJavascript,
+  SiHarness: SiGithubactions,
 }
 
 export default function Skills() {

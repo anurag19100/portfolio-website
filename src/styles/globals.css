@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-terminal-bg text-gray-200 font-sans;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-terminal-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-terminal-green/30 rounded-full;
+  }
+  ::selection {
+    @apply bg-terminal-green/30 text-terminal-green;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-terminal-card/80 backdrop-blur-xl border border-terminal-border rounded-xl;
+  }
+  .glow-border {
+    @apply border border-terminal-green/20 hover:border-terminal-green/50 transition-all duration-500;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.05);
+  }
+  .glow-border:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+  }
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-2;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-terminal-green via-terminal-blue to-terminal-purple;
+  }
+  .tech-badge {
+    @apply px-3 py-1 text-xs font-mono rounded-full border border-terminal-green/30 text-terminal-green bg-terminal-green/5 hover:bg-terminal-green/10 transition-all;
+  }
+}

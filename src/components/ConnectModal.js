@@ -161,16 +161,10 @@ export default function ConnectModal({ isOpen, onClose }) {
                   <div className="mt-4">
                     <button
                       onClick={() => {
-                        const openCalendly = () => {
-                          window.Calendly.initPopupWidget({ url: personalInfo.calendly })
-                        }
                         if (window.Calendly) {
-                          openCalendly()
+                          window.Calendly.initPopupWidget({ url: personalInfo.calendly })
                         } else {
-                          const script = document.createElement('script')
-                          script.src = 'https://assets.calendly.com/assets/external/widget.js'
-                          script.onload = openCalendly
-                          document.head.appendChild(script)
+                          window.open(personalInfo.calendly, '_blank')
                         }
                       }}
                       className="w-full glass-card glow-border rounded-xl p-4 text-left group hover:-translate-y-1 transition-all duration-200 flex items-center gap-3"

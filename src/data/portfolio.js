@@ -9,7 +9,7 @@ export const personalInfo = {
   linkedin: 'https://linkedin.com/in/anurag19100',
   portfolio: 'https://anurag-cv.netlify.app',
   resumeFile: '/anurag_gupta_cv.pdf',
-  calendly: 'https://calendly.com/anurag19100',
+  calendly: 'https://calendly.com/anurag19100/30min',
   bio: `DevOps Engineer with ~4 years of experience designing, implementing, and optimizing cloud infrastructure at scale — from BigBasket's quick-commerce platform serving millions with zero downtime, to Blackduck's enterprise security systems trusted by Fortune 500. 5x certified across AWS, GCP, Kubernetes, and Terraform. Strong background in high-availability architecture, CI/CD automation, and cloud-native security. I write raw manifests, dig into system internals, and automate everything that breaks twice.`,
   bioHighlights: [
     { label: 'BigBasket', detail: 'Built resilient, zero-downtime infra for India\'s largest quick-commerce — 100+ microservices, event-driven scaling, $20K/mo savings' },

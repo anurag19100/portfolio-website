@@ -69,7 +69,7 @@ export default function About() {
             <h3 className="font-mono text-terminal-green text-sm mb-4 flex items-center gap-2">
               <FaCertificate size={14} /> // certifications
             </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {certifications.map((cert, i) => (
                 <motion.div
                   key={cert.name}

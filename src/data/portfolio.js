@@ -10,7 +10,7 @@ export const personalInfo = {
   portfolio: 'https://anurag-cv.netlify.app',
   resumeFile: '/anurag_gupta_cv.pdf',
   calendly: 'https://calendly.com/anurag19100',
-  bio: `DevOps Engineer with ~4 years of experience designing, implementing, and optimizing cloud infrastructure at scale — from BigBasket's quick-commerce platform serving millions with zero downtime, to Blackduck's enterprise security systems trusted by Fortune 500. 4x certified across AWS, GCP, Kubernetes, and Terraform. Strong background in high-availability architecture, CI/CD automation, and cloud-native security. I write raw manifests, dig into system internals, and automate everything that breaks twice.`,
+  bio: `DevOps Engineer with ~4 years of experience designing, implementing, and optimizing cloud infrastructure at scale — from BigBasket's quick-commerce platform serving millions with zero downtime, to Blackduck's enterprise security systems trusted by Fortune 500. 5x certified across AWS, GCP, Kubernetes, and Terraform. Strong background in high-availability architecture, CI/CD automation, and cloud-native security. I write raw manifests, dig into system internals, and automate everything that breaks twice.`,
   bioHighlights: [
     { label: 'BigBasket', detail: 'Built resilient, zero-downtime infra for India\'s largest quick-commerce — 100+ microservices, event-driven scaling, $20K/mo savings' },
     { label: 'Blackduck', detail: 'Securing enterprise-grade systems used by Fortune 500 — 1100+ DB migrations, 60+ clusters, Istio service mesh, AI-powered ops' },
@@ -230,6 +230,7 @@ export const certifications = [
   { name: 'AWS Solutions Architect - Associate (SAA-C03)', issuer: 'AWS', icon: 'SiAmazonwebservices' },
   { name: 'Certified Kubernetes Administrator (CKA)', issuer: 'CNCF', icon: 'SiKubernetes' },
   { name: 'Terraform Associate (003)', issuer: 'HashiCorp', icon: 'SiTerraform' },
+  { name: 'Linux Foundation Certified System Administrator (LFCS)', issuer: 'Linux Foundation', icon: 'SiLinux' },
 ]
 
 export const devopsProjects = [
@@ -283,7 +284,7 @@ export const openTo = [
 
 export const stats = [
   { label: 'Production Infrastructure', value: '~4 Years' },
-  { label: 'AWS + GCP + K8s + Terraform', value: '4x Certified' },
+  { label: 'AWS + GCP + K8s + Terraform + Linux', value: '5x Certified' },
   { label: 'GKE + EKS Clusters Managed', value: '60+' },
   { label: 'Cloud Cost Optimized', value: '$20K/mo' },
 ]

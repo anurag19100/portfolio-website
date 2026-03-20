@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaTimes, FaEnvelope, FaLaptopCode, FaBriefcase, FaShieldAlt, FaServer, FaPaperPlane, FaCheck, FaSpinner } from 'react-icons/fa'
+import { FaTimes, FaEnvelope, FaLaptopCode, FaBriefcase, FaShieldAlt, FaServer, FaPaperPlane, FaCheck, FaSpinner, FaCalendarAlt } from 'react-icons/fa'
 import { personalInfo } from '../data/portfolio'
 
 const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || ''
@@ -157,7 +157,27 @@ export default function ConnectModal({ isOpen, onClose }) {
                     ))}
                   </div>
 
-                  <div className="mt-5 pt-4 border-t border-terminal-border/50 text-center">
+                  {/* Schedule a Call */}
+                  <div className="mt-4">
+                    <button
+                      onClick={() => {
+                        if (window.Calendly) {
+                          window.Calendly.initPopupWidget({ url: personalInfo.calendly })
+                        } else {
+                          window.open(personalInfo.calendly, '_blank')
+                        }
+                      }}
+                      className="w-full glass-card glow-border rounded-xl p-4 text-left group hover:-translate-y-1 transition-all duration-200 flex items-center gap-3"
+                    >
+                      <FaCalendarAlt className="text-terminal-green" size={20} />
+                      <div>
+                        <div className="text-white text-sm font-semibold">Schedule a Call</div>
+                        <div className="text-gray-500 text-xs mt-0.5">Book a 30-min slot directly on my calendar</div>
+                      </div>
+                    </button>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-terminal-border/50 text-center">
                     <a
                       href={`mailto:${personalInfo.email}?subject=Let's Connect`}
                       className="font-mono text-xs text-gray-500 hover:text-terminal-green transition-colors inline-flex items-center gap-1.5"

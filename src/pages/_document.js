@@ -10,12 +10,13 @@ export default function Document() {
         <meta name="description" content="Anurag Gupta - DevOps Engineer | AWS, Kubernetes, Terraform, CI/CD" />
         <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Kubernetes, Terraform, Jenkins, Docker, CI/CD" />
         <meta property="og:title" content="Anurag Gupta - DevOps Engineer" />
-        <meta property="og:description" content="DevOps Engineer with 2+ years of experience in cloud infrastructure and automation at BigBasket" />
+        <meta property="og:description" content="Sr. DevOps Engineer with ~4 years building infrastructure at scale — Blackduck, BigBasket. 4x Cloud Certified." />
         <meta property="og:type" content="website" />
       </Head>
       <body>
         <Main />
         <NextScript />
+        <script src="https://assets.calendly.com/assets/external/widget.js" async />
       </body>
     </Html>
   )

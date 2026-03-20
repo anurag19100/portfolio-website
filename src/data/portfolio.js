@@ -9,7 +9,7 @@ export const personalInfo = {
   linkedin: 'https://linkedin.com/in/anurag19100',
   portfolio: 'https://anurag-cv.netlify.app',
   resumeFile: '/anurag_gupta_cv.pdf',
-  bio: `~4 years building infrastructure that doesn't break — from BigBasket's quick-commerce platform handling millions of orders with zero downtime, to Blackduck's enterprise security suite trusted by global tech giants. 4x cloud-certified across AWS, GCP, Kubernetes, and Terraform. I dig into internals, write raw manifests, and understand why things break so I can automate them away. Open-source contributor, currently deep in security, networking, and systems at international scale.`,
+  bio: `DevOps Engineer with ~4 years of experience designing, implementing, and optimizing cloud infrastructure at scale — from BigBasket's quick-commerce platform serving millions with zero downtime, to Blackduck's enterprise security systems trusted by Fortune 500. 4x certified across AWS, GCP, Kubernetes, and Terraform. Strong background in high-availability architecture, CI/CD automation, and cloud-native security. I write raw manifests, dig into system internals, and automate everything that breaks twice.`,
   bioHighlights: [
     { label: 'BigBasket', detail: 'Built resilient, zero-downtime infra for India\'s largest quick-commerce — 100+ microservices, event-driven scaling, $20K/mo savings' },
     { label: 'Blackduck', detail: 'Securing enterprise-grade systems used by Fortune 500 — 1100+ DB migrations, 60+ clusters, Istio service mesh, AI-powered ops' },
@@ -20,7 +20,7 @@ export const personalInfo = {
     'Infrastructure Architect',
     'Open Source Contributor',
     'Platform Engineer',
-    'Bug Bounty Hunter',
+    'Site Reliability Engineer',
   ],
 }
 
@@ -29,8 +29,8 @@ export const socialLinks = [
   { name: 'LinkedIn', url: 'https://linkedin.com/in/anurag19100', icon: 'FaLinkedin', category: 'Professional' },
   { name: 'Email', url: 'mailto:anurag19100@gmail.com', icon: 'FaEnvelope', category: 'Contact' },
   { name: 'Portfolio', url: 'https://anurag-cv.netlify.app', icon: 'FaGlobe', category: 'Portfolio' },
-  { name: 'HackerOne', url: '#', icon: 'FaBug', category: 'Bug Bounty' },
-  { name: 'Bugcrowd', url: '#', icon: 'FaShieldAlt', category: 'Bug Bounty' },
+  { name: 'Docker Hub', url: '#', icon: 'FaDocker', category: 'Developer' },
+  { name: 'Terraform Registry', url: '#', icon: 'FaCloud', category: 'Developer' },
   { name: 'Twitter / X', url: '#', icon: 'FaXTwitter', category: 'Social' },
   { name: 'Naukri', url: '#', icon: 'FaBriefcase', category: 'Job Portal' },
   { name: 'Wellfound', url: '#', icon: 'FaRocket', category: 'Job Portal' },
@@ -131,6 +131,18 @@ export const experience = [
         description: 'Established production observability with Thanos, Grafana, Datadog, and New Relic — created 10+ dashboards, alerts, and monitors for monitoring and alerting across the product stack.',
         tags: ['Thanos', 'Grafana', 'Datadog', 'New Relic'],
         impact: '24x7 observability',
+      },
+      {
+        title: 'Chainguard Hardened Images',
+        description: 'Implemented secure container image strategy using Chainguard hardened images, eliminating critical CVEs and reducing image vulnerability surface by 95%+ across production workloads.',
+        tags: ['Chainguard', 'Container Security', 'CVE', 'Supply Chain'],
+        impact: '95%+ CVE reduction',
+      },
+      {
+        title: 'FedRAMP Compliance Readiness',
+        description: 'Enforced FedRAMP-aligned security standards across Kubernetes and cloud infrastructure — least privilege IAM, audit logging, encryption (at-rest/in-transit), and vulnerability management.',
+        tags: ['FedRAMP', 'IAM', 'Encryption', 'Compliance'],
+        impact: 'Compliance-ready infra',
       },
     ],
   },
@@ -262,15 +274,15 @@ export const devopsProjects = [
 ]
 
 export const openTo = [
-  { area: 'DevOps & SRE', description: 'Infrastructure automation, Kubernetes, CI/CD, observability, cloud architecture', icon: 'FaServer', color: 'from-terminal-green to-emerald-500' },
+  { area: 'DevOps & SRE', description: 'Infrastructure automation, Kubernetes, CI/CD, observability, incident management', icon: 'FaServer', color: 'from-terminal-green to-emerald-500' },
+  { area: 'Cloud Architecture', description: 'Multi-cloud design, migration strategy, cost optimization, scalable infrastructure', icon: 'FaCloud', color: 'from-cyan-500 to-blue-500' },
   { area: 'Security & Compliance', description: 'Pod security, network isolation, mTLS, zero-trust architecture, compliance audits', icon: 'FaShieldAlt', color: 'from-red-500 to-orange-500' },
-  { area: 'Bug Bounty', description: 'Web application security, infrastructure vulnerabilities, responsible disclosure', icon: 'FaBug', color: 'from-yellow-500 to-amber-500' },
-  { area: 'Freelance', description: 'DevOps consulting, cloud migration, security hardening, infrastructure audits', icon: 'FaLaptopCode', color: 'from-terminal-blue to-purple-500' },
+  { area: 'Freelance & Consulting', description: 'DevOps consulting, infra audits, cloud migration, security hardening', icon: 'FaLaptopCode', color: 'from-terminal-blue to-purple-500' },
 ]
 
 export const stats = [
-  { label: 'DevOps | Security | Freelance', value: 'Available' },
+  { label: 'Production Infrastructure', value: '~4 Years' },
   { label: 'AWS + GCP + K8s + Terraform', value: '4x Certified' },
-  { label: 'Blackduck, BigBasket & More', value: '3+ Companies' },
-  { label: 'Proven Cost Savings', value: '$20K/mo' },
+  { label: 'GKE + EKS Clusters Managed', value: '60+' },
+  { label: 'Cloud Cost Optimized', value: '$20K/mo' },
 ]

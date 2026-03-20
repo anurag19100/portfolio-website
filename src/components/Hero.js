@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { personalInfo, stats, socialLinks } from '../data/portfolio'
-import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt, FaBriefcase, FaRocket, FaLaptopCode, FaCode, FaMedium, FaDev, FaStackOverflow, FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaDocker, FaCloud, FaShieldAlt, FaBriefcase, FaRocket, FaLaptopCode, FaCode, FaMedium, FaDev, FaStackOverflow, FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { useModals } from '../context/ModalContext'
 
 const iconMap = {
-  FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt,
+  FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaDocker, FaCloud, FaShieldAlt,
   FaXTwitter, FaBriefcase, FaRocket, FaLaptopCode, FaCode,
   FaMedium, FaDev, FaStackOverflow,
 }

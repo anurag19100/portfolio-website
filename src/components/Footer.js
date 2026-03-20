@@ -11,7 +11,7 @@ const navLinks = [
 ]
 
 export default function Footer() {
-  const { setResumeOpen } = useModals()
+  const { setResumeOpen, setConnectOpen } = useModals()
 
   return (
     <footer className="relative border-t border-terminal-border/50">
@@ -79,17 +79,17 @@ export default function Footer() {
           <div>
             <div className="font-mono text-xs text-terminal-green/50 mb-4">// system_status</div>
             <div className="space-y-3 font-mono text-sm">
-              <div className="flex items-center gap-2">
+              <button onClick={() => setConnectOpen(true)} className="flex items-center gap-2 hover:text-terminal-green transition-colors">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-gray-400">Available for hire</span>
-              </div>
+                <span className="text-gray-400 hover:text-terminal-green">Available for hire</span>
+              </button>
+              <button onClick={() => setConnectOpen(true)} className="flex items-center gap-2 hover:text-terminal-green transition-colors">
+                <span className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="text-gray-400 hover:text-terminal-green">Open to freelance</span>
+              </button>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-gray-400">Open to freelance</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-gray-400">Bug bounty active</span>
+                <span className="text-gray-400">99.9% uptime delivered</span>
               </div>
               <div className="mt-4 p-3 rounded-lg bg-terminal-bg/60 border border-terminal-border/30">
                 <div className="text-gray-600 text-xs">response_time</div>

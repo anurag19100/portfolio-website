@@ -1,9 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { personalInfo, certifications, openTo } from '../data/portfolio'
-import { FaServer, FaShieldAlt, FaBug, FaLaptopCode, FaCertificate } from 'react-icons/fa'
-
-const openToIcons = { FaServer, FaShieldAlt, FaBug, FaLaptopCode }
+import { personalInfo, certifications } from '../data/portfolio'
+import { FaCertificate } from 'react-icons/fa'
 
 export default function About() {
   const ref = useRef(null)
@@ -58,7 +56,7 @@ export default function About() {
               <div className="glass-card glow-border rounded-2xl p-6 flex-1">
                 <div className="font-mono text-xs text-terminal-orange mb-2">focus_areas</div>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {['Multi-Cloud', 'Kubernetes', 'Service Mesh', 'GitOps', 'Security', 'Platform Eng', 'Terraform', 'Observability', 'FinOps', 'AI Ops'].map(area => (
+                  {['AWS', 'GCP', 'Kubernetes', 'Terraform', 'GitOps', 'Service Mesh', 'CI/CD', 'Observability', 'Security', 'Platform Eng', 'FinOps', 'Python'].map(area => (
                     <span key={area} className="tech-badge">{area}</span>
                   ))}
                 </div>
@@ -94,38 +92,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Open To */}
-          <div>
-            <h3 className="font-mono text-terminal-green text-sm mb-4">
-              // open_to
-            </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {openTo.map((item, i) => {
-                const Icon = openToIcons[item.icon] || FaServer;
-                return (
-                  <motion.div
-                    key={item.area}
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.5 + i * 0.1 }}
-                    className="glass-card glow-border rounded-xl p-5 group hover:-translate-y-1 transition-all duration-300"
-                  >
-                    <div
-                      className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
-                    >
-                      <Icon className="text-white" size={18} />
-                    </div>
-                    <div className="text-white font-semibold text-sm mb-1">
-                      {item.area}
-                    </div>
-                    <div className="text-gray-500 text-xs leading-relaxed">
-                      {item.description}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

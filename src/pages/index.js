@@ -11,6 +11,7 @@ import Education from '../components/Education'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Terminal from '../components/Terminal'
+import OpenTo from '../components/OpenTo'
 import ResumeModal from '../components/ResumeModal'
 import ConnectModal from '../components/ConnectModal'
 import { useModals } from '../context/ModalContext'
@@ -66,10 +67,11 @@ export default function Home() {
               <Hero />
               <About />
               <Terminal />
-              <Skills />
               <Experience />
+              <Skills />
               <Projects />
               <Education />
+              <OpenTo />
               <Contact />
             </main>
             <Footer />

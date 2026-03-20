@@ -34,7 +34,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
         >
           <div className="font-mono text-terminal-green/60 text-sm mb-2">
-            <span className="text-terminal-green">02.</span> skills
+            <span className="text-terminal-green">03.</span> skills
           </div>
           <h2 className="section-heading text-white mb-12">
             Tech <span className="gradient-text">Stack</span>

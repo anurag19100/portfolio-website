@@ -11,8 +11,12 @@ import Education from '../components/Education'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Terminal from '../components/Terminal'
+import ResumeModal from '../components/ResumeModal'
+import ConnectModal from '../components/ConnectModal'
+import { useModals } from '../context/ModalContext'
 
 export default function Home() {
+  const { resumeOpen, setResumeOpen, connectOpen, setConnectOpen } = useModals()
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -69,6 +73,8 @@ export default function Home() {
               <Contact />
             </main>
             <Footer />
+            <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />
+            <ConnectModal isOpen={connectOpen} onClose={() => setConnectOpen(false)} />
           </motion.div>
         )}
       </AnimatePresence>

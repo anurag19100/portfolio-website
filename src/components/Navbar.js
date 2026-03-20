@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { personalInfo } from '../data/portfolio'
+import { useModals } from '../context/ModalContext'
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -13,6 +13,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { setResumeOpen } = useModals()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -45,14 +46,12 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-terminal-green group-hover:w-full transition-all duration-300" />
               </a>
             ))}
-            <a
-              href={personalInfo.resumeFile}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setResumeOpen(true)}
               className="px-4 py-2 border border-terminal-green/50 text-terminal-green font-mono text-sm rounded hover:bg-terminal-green/10 transition-all"
             >
               resume.pdf
-            </a>
+            </button>
           </div>
           <button
             className="md:hidden text-terminal-green"
@@ -78,6 +77,12 @@ export default function Navbar() {
                 <span className="text-terminal-green/50">$ </span>cd {link.name.toLowerCase()}
               </a>
             ))}
+            <button
+              onClick={() => { setResumeOpen(true); setMobileOpen(false) }}
+              className="block py-2 font-mono text-sm text-terminal-green"
+            >
+              <span className="text-terminal-green/50">$ </span>cat resume.pdf
+            </button>
           </motion.div>
         )}
       </div>

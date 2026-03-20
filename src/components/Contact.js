@@ -1,18 +1,18 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { personalInfo } from '../data/portfolio'
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { useModals } from '../context/ModalContext'
 
 export default function Contact() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-100px' })
+  const { setConnectOpen } = useModals()
 
   const contactItems = [
     { icon: FaEnvelope, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}`, color: 'text-terminal-orange' },
-    { icon: FaPhone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}`, color: 'text-terminal-green' },
     { icon: FaGithub, label: 'GitHub', value: 'anurag19100', href: personalInfo.github, color: 'text-white' },
     { icon: FaLinkedin, label: 'LinkedIn', value: 'in/anurag19100', href: personalInfo.linkedin, color: 'text-terminal-blue' },
-    { icon: FaMapMarkerAlt, label: 'Location', value: personalInfo.location, href: '#', color: 'text-terminal-purple' },
   ]
 
   return (
@@ -33,7 +33,7 @@ export default function Contact() {
             I&apos;m always open to discussing new opportunities, DevOps challenges, or just having a chat about cloud infrastructure.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             {contactItems.map((item, i) => (
               <motion.a
                 key={item.label}
@@ -62,12 +62,12 @@ export default function Contact() {
             transition={{ delay: 0.6 }}
             className="mt-12 text-center"
           >
-            <a
-              href={`mailto:${personalInfo.email}?subject=Let's Connect - DevOps Opportunity`}
+            <button
+              onClick={() => setConnectOpen(true)}
               className="inline-flex items-center gap-2 px-8 py-4 bg-terminal-green/10 border border-terminal-green text-terminal-green font-mono rounded-xl hover:bg-terminal-green/20 transition-all text-lg"
             >
               <FaEnvelope /> Send me a message
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </div>

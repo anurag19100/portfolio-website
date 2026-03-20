@@ -24,27 +24,41 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
+          {/* Two-column: Bio + Info cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Left: Bio */}
             <div className="glass-card glow-border rounded-2xl p-8">
               <div className="font-mono text-xs text-terminal-green/50 mb-4">// bio.config</div>
-              <p className="text-gray-300 leading-relaxed text-lg">{personalInfo.bio}</p>
+              <p className="text-gray-300 leading-relaxed text-lg mb-6">{personalInfo.bio}</p>
+
+              <div className="space-y-3">
+                {(personalInfo.bioHighlights || []).map((h, i) => (
+                  <div key={i} className="bg-terminal-bg/60 rounded-xl p-4 border border-terminal-border/50">
+                    <div className="font-mono text-xs text-terminal-green font-semibold mb-1.5">{h.label}</div>
+                    <div className="text-gray-400 text-sm leading-relaxed">{h.detail}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-4">
+            {/* Right: Info cards stacked */}
+            <div className="flex flex-col gap-4">
               <div className="glass-card glow-border rounded-2xl p-6">
                 <div className="font-mono text-xs text-terminal-green mb-2">current_role</div>
                 <div className="text-white text-lg font-semibold">Sr. DevOps Engineer</div>
-                <div className="text-gray-500 font-mono text-sm">@ Blackduck (formerly Synopsys) &middot; June 2025 - Present</div>
+                <div className="text-gray-500 font-mono text-sm">@ Blackduck (formerly Synopsys)</div>
+                <div className="text-gray-600 font-mono text-xs mt-1">Enterprise security &middot; Global scale</div>
               </div>
               <div className="glass-card glow-border rounded-2xl p-6">
-                <div className="font-mono text-xs text-terminal-blue mb-2">education</div>
-                <div className="text-white text-lg font-semibold">B.Tech, Computer Science</div>
-                <div className="text-gray-500 font-mono text-sm">IIIT Naya Raipur &middot; 2019-2023</div>
+                <div className="font-mono text-xs text-terminal-blue mb-2">previous</div>
+                <div className="text-white text-lg font-semibold">DevOps Engineer I</div>
+                <div className="text-gray-500 font-mono text-sm">@ BigBasket (2+ years)</div>
+                <div className="text-gray-600 font-mono text-xs mt-1">Quick-commerce &middot; Zero downtime</div>
               </div>
-              <div className="glass-card glow-border rounded-2xl p-6">
+              <div className="glass-card glow-border rounded-2xl p-6 flex-1">
                 <div className="font-mono text-xs text-terminal-orange mb-2">focus_areas</div>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {['Multi-Cloud (AWS + GCP)', 'Kubernetes & Service Mesh', 'GitOps & CI/CD', 'Security & Compliance', 'Platform Engineering', 'AI-Powered DevOps'].map(area => (
+                  {['Multi-Cloud', 'Kubernetes', 'Service Mesh', 'GitOps', 'Security', 'Platform Eng', 'Terraform', 'Observability', 'FinOps', 'AI Ops'].map(area => (
                     <span key={area} className="tech-badge">{area}</span>
                   ))}
                 </div>
@@ -69,8 +83,12 @@ export default function About() {
                   <div className="text-terminal-green text-2xl mb-2 group-hover:scale-110 transition-transform">
                     <FaCertificate />
                   </div>
-                  <div className="text-white text-sm font-semibold">{cert.name}</div>
-                  <div className="text-gray-500 text-xs font-mono mt-1">{cert.issuer}</div>
+                  <div className="text-white text-sm font-semibold">
+                    {cert.name}
+                  </div>
+                  <div className="text-gray-500 text-xs font-mono mt-1">
+                    {cert.issuer}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -78,10 +96,12 @@ export default function About() {
 
           {/* Open To */}
           <div>
-            <h3 className="font-mono text-terminal-green text-sm mb-4">// open_to</h3>
+            <h3 className="font-mono text-terminal-green text-sm mb-4">
+              // open_to
+            </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {openTo.map((item, i) => {
-                const Icon = openToIcons[item.icon] || FaServer
+                const Icon = openToIcons[item.icon] || FaServer;
                 return (
                   <motion.div
                     key={item.area}
@@ -90,18 +110,24 @@ export default function About() {
                     transition={{ delay: 0.5 + i * 0.1 }}
                     className="glass-card glow-border rounded-xl p-5 group hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                    <div
+                      className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
+                    >
                       <Icon className="text-white" size={18} />
                     </div>
-                    <div className="text-white font-semibold text-sm mb-1">{item.area}</div>
-                    <div className="text-gray-500 text-xs leading-relaxed">{item.description}</div>
+                    <div className="text-white font-semibold text-sm mb-1">
+                      {item.area}
+                    </div>
+                    <div className="text-gray-500 text-xs leading-relaxed">
+                      {item.description}
+                    </div>
                   </motion.div>
-                )
+                );
               })}
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

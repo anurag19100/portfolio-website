@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { personalInfo, stats, socialLinks } from '../data/portfolio'
 import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt, FaBriefcase, FaRocket, FaLaptopCode, FaCode, FaMedium, FaDev, FaStackOverflow, FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
+import { useModals } from '../context/ModalContext'
 
 const iconMap = {
   FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaBug, FaShieldAlt,
@@ -13,6 +14,7 @@ const iconMap = {
 
 export default function Hero() {
   const [showProfiles, setShowProfiles] = useState(false)
+  const { setConnectOpen } = useModals()
 
   const grouped = socialLinks.reduce((acc, link) => {
     if (!acc[link.category]) acc[link.category] = []
@@ -86,12 +88,12 @@ export default function Hero() {
             <a href={`mailto:${personalInfo.email}`} className="p-3 glass-card glow-border rounded-xl hover:text-terminal-orange transition-all">
               <FaEnvelope size={22} />
             </a>
-            <a
-              href={`mailto:${personalInfo.email}?subject=Let's Connect`}
+            <button
+              onClick={() => setConnectOpen(true)}
               className="px-6 py-3 bg-terminal-green/10 border border-terminal-green/50 text-terminal-green font-mono text-sm rounded-xl hover:bg-terminal-green/20 transition-all flex items-center gap-2"
             >
               Let&apos;s Connect
-            </a>
+            </button>
           </motion.div>
 
           {/* Collapsible All Profiles */}
@@ -152,33 +154,36 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
           >
             {stats.map((stat, i) => (
-              <div key={i} className="glass-card glow-border rounded-xl p-4 text-center">
-                <div className="text-2xl md:text-3xl font-bold text-terminal-green font-mono">{stat.value}</div>
-                <div className="text-xs text-gray-500 mt-1 font-mono">{stat.label}</div>
+              <div key={i} className="glass-card glow-border rounded-xl px-4 py-5 text-center flex flex-col justify-center min-h-[100px]">
+                <div className="text-lg md:text-xl font-bold text-terminal-green font-mono leading-tight mb-1.5">{stat.value}</div>
+                <div className="text-[11px] text-gray-500 font-mono leading-snug">{stat.label}</div>
               </div>
             ))}
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="font-mono text-terminal-green/40 text-xs text-center"
-          >
-            scroll down
-            <div className="mt-1">v</div>
-          </motion.div>
-        </motion.div>
       </div>
+
+      {/* Scroll indicator - fixed to bottom of viewport */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2 }}
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40"
+      >
+        <motion.a
+          href="#about"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="font-mono text-terminal-green/40 text-xs text-center block hover:text-terminal-green/70 transition-colors"
+        >
+          scroll down
+          <div className="mt-1">v</div>
+        </motion.a>
+      </motion.div>
     </section>
   )
 }

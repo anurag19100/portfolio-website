@@ -9,7 +9,11 @@ export const personalInfo = {
   linkedin: 'https://linkedin.com/in/anurag19100',
   portfolio: 'https://anurag-cv.netlify.app',
   resumeFile: '/anurag_gupta_cv.pdf',
-  bio: `DevOps Engineer with ~4 years of experience across AWS and GCP, certified in both cloud platforms and Terraform. I build infrastructure the way I approach everything else — dig into the internals, understand why things break, then automate so they don't. Open-source contributor, competitive programmer, and someone who'd rather write raw manifests to learn the system than copy-paste a Helm chart. Currently going deeper into networking, security, and systems — because the best DevOps work happens when you actually understand what's under the abstraction.`,
+  bio: `~4 years building infrastructure that doesn't break — from BigBasket's quick-commerce platform handling millions of orders with zero downtime, to Blackduck's enterprise security suite trusted by global tech giants. 4x cloud-certified across AWS, GCP, Kubernetes, and Terraform. I dig into internals, write raw manifests, and understand why things break so I can automate them away. Open-source contributor, currently deep in security, networking, and systems at international scale.`,
+  bioHighlights: [
+    { label: 'BigBasket', detail: 'Built resilient, zero-downtime infra for India\'s largest quick-commerce — 100+ microservices, event-driven scaling, $20K/mo savings' },
+    { label: 'Blackduck', detail: 'Securing enterprise-grade systems used by Fortune 500 — 1100+ DB migrations, 60+ clusters, Istio service mesh, AI-powered ops' },
+  ],
   typingTexts: [
     'Sr. DevOps Engineer',
     'Cloud & Security Professional',
@@ -265,8 +269,8 @@ export const openTo = [
 ]
 
 export const stats = [
-  { label: 'Years of Experience', value: '~4' },
-  { label: 'Cloud Certifications', value: '4' },
-  { label: 'GKE/EKS Clusters', value: '60+' },
-  { label: 'Cloud Platforms', value: 'AWS & GCP' },
+  { label: 'DevOps | Security | Freelance', value: 'Available' },
+  { label: 'AWS + GCP + K8s + Terraform', value: '4x Certified' },
+  { label: 'Blackduck, BigBasket & More', value: '3+ Companies' },
+  { label: 'Proven Cost Savings', value: '$20K/mo' },
 ]

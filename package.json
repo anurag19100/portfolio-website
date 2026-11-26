@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "14.x",
-    "npm": ">=6"
+    "node": "16.x",
+    "npm": ">=8"
   },
   "dependencies": {
     "@babel/core": "^7.25.7",
@@ -17,7 +17,7 @@
     "bootstrap": "^4.6.0",
     "gitmoji-cli": "^4.0.0",
     "lint-staged": "^11.0.0",
-    "sass": "^1.63.6",
+    "sass": "~1.69.7",
     "react": "^16.14.0",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^16.14.0",
@@ -53,9 +53,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^12.1.5",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
-    "canvas": "^2.6.1",
     "eslint": "^7.29.0",
     "eslint-plugin-react": "^7.24.0",
     "prettier": "^2.3.2",

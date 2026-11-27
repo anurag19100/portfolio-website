@@ -1,0 +1,2 @@
+# Netlify: the app routes on the client, so any path that is not a file gets the app.
+/*    /index.html    200

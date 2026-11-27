@@ -3,8 +3,13 @@ import {Container, Row} from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import {AiOutlineDownload} from 'react-icons/ai'
 import {Document, Page, pdfjs} from 'react-pdf'
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+// the worker ships with the site, so its version always matches the library
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+	'pdfjs-dist/build/pdf.worker.min.mjs',
+	import.meta.url
+).toString()
 
 const resumeLink =
 	'https://raw.githubusercontent.com/anurag19100/portfolio-website/main/src/assets/anurag_gupta_cv.pdf'

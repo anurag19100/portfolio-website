@@ -16,8 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        # react-scripts 4 (webpack 4) needs Node 16; package.json "engines" says the same
-        node-version: [16.x]
+        # .nvmrc (read by the host) and package.json "engines" say the same
+        node-version: [24.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
